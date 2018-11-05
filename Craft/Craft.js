@@ -10,17 +10,21 @@ class Craft extends React.Component {
     };
   }
 
-  render() {
+  componentWillMount() {
     const { match } = this.props;
-    const { isLoading } = this.state;
     const db = firebase.firestore();
     db.settings({ timestampsInSnapshots: true });
-    const docRef = db.collection(process.env.REACT_APP_CRAFTS_COLLECTION).doc(match.params.craftId);
+    const docRef = db
+      .collection(process.env.REACT_APP_CRAFTS_COLLECTION)
+      .doc(match.params.craftId);
     docRef
       .get()
       .then(doc => {
         if (doc.exists) {
           console.log('Craft exists...');
+          this.setState({
+            isLoading: false
+          });
         } else {
           console.log('Craft does not exist');
         }
@@ -28,7 +32,11 @@ class Craft extends React.Component {
       .catch(err => {
         console.log('Error getting document.', err);
       });
-    console.log();
+  }
+
+  render() {
+    const { match } = this.props;
+    const { isLoading } = this.state;
     return (
       <React.Fragment>
         {isLoading ? (
