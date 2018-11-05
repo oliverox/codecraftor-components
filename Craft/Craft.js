@@ -8,6 +8,8 @@ class Craft extends React.Component {
     this.state = {
       isLoading: true
     };
+    this.unsubscribeFromSnapshot = false;
+    this.handleRemoteAction = this.handleRemoteAction.bind(this);
   }
 
   componentWillMount() {
@@ -22,6 +24,9 @@ class Craft extends React.Component {
       .then(doc => {
         if (doc.exists) {
           console.log('Craft exists...');
+          this.unsubscribeFromSnapshot = docRef.onSnapshot(
+            this.handleRemoteAction
+          );
           this.setState({
             isLoading: false
           });
@@ -32,6 +37,14 @@ class Craft extends React.Component {
       .catch(err => {
         console.log('Error getting document.', err);
       });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromSnapshot();
+  }
+
+  handleRemoteAction(doc) {
+    console.log('Current data: ', doc.data());
   }
 
   render() {
