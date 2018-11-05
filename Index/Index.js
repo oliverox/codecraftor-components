@@ -22,7 +22,9 @@ class Index extends React.Component {
     db.settings({ timestampsInSnapshots: true });  
     db.collection(process.env.REACT_APP_CRAFTS_COLLECTION)
       .add({
-        created: Date.now()
+        created: Date.now(),
+        actions: [],
+        config: {}
       })
       .then(docRef => {
         history.push(`/new/${docRef.id}`);
