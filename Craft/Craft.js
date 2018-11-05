@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import { Button } from '@blueprintjs/core';
-import { SpinnerOverlay } from '../../components';
+import SpinnerOverlay from '../../components/SpinnerOverlay/SpinnerOverlay';
 
 class Craft extends React.Component {
   constructor() {
