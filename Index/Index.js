@@ -19,7 +19,7 @@ class Index extends React.Component {
     this.setState({
       isRedirecting: true
     });
-    db.settings({ timestampsInSnapshots: true });
+    db.settings({ timestampsInSnapshots: true });  
     db.collection(process.env.REACT_APP_CRAFTS_COLLECTION)
       .add({
         created: Date.now()

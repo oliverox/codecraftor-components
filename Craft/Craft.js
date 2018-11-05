@@ -14,7 +14,8 @@ class Craft extends React.Component {
     const { match } = this.props;
     const { isLoading } = this.state;
     const db = firebase.firestore();
-    const docRef = db.collection(process.env.REACT_APP_CRAFTS_COLLECTION);
+    db.settings({ timestampsInSnapshots: true });
+    const docRef = db.collection(process.env.REACT_APP_CRAFTS_COLLECTION).doc(match.params.craftId);
     docRef
       .get()
       .then(doc => {
