@@ -1,14 +1,18 @@
 import React from 'react';
 import firebase from 'firebase/app';
+import { Button } from '@blueprintjs/core';
 import { SpinnerOverlay } from '../../components';
 
 class Craft extends React.Component {
   constructor() {
     super();
     this.state = {
-      isLoading: true
+      isLoading: true,
+      body: []
     };
+    this.pageRefreshed = true;
     this.unsubscribeFromSnapshot = false;
+    this.addComponent = this.addComponent.bind(this);
     this.handleRemoteAction = this.handleRemoteAction.bind(this);
   }
 
@@ -23,7 +27,7 @@ class Craft extends React.Component {
       .get()
       .then(doc => {
         if (doc.exists) {
-          console.log('Craft exists...');
+          console.log('Craft exists => Subscribe to onSnapshot');
           this.unsubscribeFromSnapshot = docRef.onSnapshot(
             this.handleRemoteAction
           );
@@ -43,8 +47,42 @@ class Craft extends React.Component {
     this.unsubscribeFromSnapshot();
   }
 
+  addComponent({ ComponentType, children, props }) {
+    console.log('addComponent:', ComponentType);
+    const { body } = this.state;
+    const newBody = body.slice();
+    let newComponent = <React.Fragment></React.Fragment>;
+    if (ComponentType === 'Button') {
+      newComponent = <Button key={newBody.length} {...props}>{children}</Button>
+    }
+    newBody.push(newComponent);
+    console.log('newBody=', newBody);
+    this.setState({
+      body: newBody
+    });
+  }
+
   handleRemoteAction(doc) {
-    console.log('Current data: ', doc.data());
+    let updates = doc.data();
+    const latest = updates.actions[updates.actions.length - 1];
+    if (this.pageRefreshed) {
+      this.pageRefreshed = false;
+      console.log('Rebuild craft with', updates);
+    } else {
+      console.log('New update: ', latest);
+      switch (latest.action) {
+        case 'ADD':
+          this.addComponent({
+            ComponentType: latest.component,
+            children: 'Hello World',
+            props: {}
+          });
+          break;
+
+        default:
+          break;
+      }
+    }
   }
 
   render() {
@@ -55,7 +93,10 @@ class Craft extends React.Component {
         {isLoading ? (
           <SpinnerOverlay display={isLoading} />
         ) : (
-          <h2>Craft: {match.params.craftId}</h2>
+          <React.Fragment>
+            <h2>Craft: {match.params.craftId}</h2>
+            {this.state.body}
+          </React.Fragment>
         )}
       </React.Fragment>
     );
