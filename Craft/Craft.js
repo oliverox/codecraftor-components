@@ -13,7 +13,7 @@ class Craft extends React.Component {
   render() {
     const { match } = this.props;
     const { isLoading } = this.state;
-    const db = firebase.firestore;
+    const db = firebase.firestore();
     const docRef = db.collection(process.env.REACT_APP_CRAFTS_COLLECTION);
     docRef
       .get()
