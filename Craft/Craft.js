@@ -51,9 +51,13 @@ class Craft extends React.Component {
     console.log('addComponent:', ComponentType);
     const { body } = this.state;
     const newBody = body.slice();
-    let newComponent = <React.Fragment></React.Fragment>;
+    let newComponent = <React.Fragment />;
     if (ComponentType === 'Button') {
-      newComponent = <Button key={newBody.length} {...props}>{children}</Button>
+      newComponent = (
+        <Button key={newBody.length} {...props}>
+          {children}
+        </Button>
+      );
     }
     newBody.push(newComponent);
     console.log('newBody=', newBody);
@@ -88,16 +92,14 @@ class Craft extends React.Component {
   render() {
     const { match } = this.props;
     const { isLoading } = this.state;
-    return (
+    return isLoading ? (
       <React.Fragment>
-        {isLoading ? (
-          <SpinnerOverlay display={isLoading} />
-        ) : (
-          <React.Fragment>
-            <h2>Craft: {match.params.craftId}</h2>
-            {this.state.body}
-          </React.Fragment>
-        )}
+        <SpinnerOverlay display={isLoading} />
+      </React.Fragment>
+    ) : (
+      <React.Fragment>
+        <h2>Craft: {match.params.craftId}</h2>
+        {this.state.body}
       </React.Fragment>
     );
   }

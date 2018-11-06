@@ -11,8 +11,8 @@ const SpinnerOverlay = ({
 }) => {
   return (
     <Overlay
-      className="overlay"
       isOpen={display}
+      className={`overlay-${size}`}
       canEscapeKeyClose={canEscapeKeyClose}
       canOutsideClickClose={canOutsideClickClose}
     >
