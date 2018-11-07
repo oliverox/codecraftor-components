@@ -3,7 +3,7 @@ import { Overlay, Spinner } from '@blueprintjs/core';
 import './SpinnerOverlay.scss';
 
 const SpinnerOverlay = ({
-  display = false,
+  isOpen = false,
   canEscapeKeyClose = false,
   canOutsideClickClose = false,
   size = Spinner.SIZE_LARGE,
@@ -11,7 +11,7 @@ const SpinnerOverlay = ({
 }) => {
   return (
     <Overlay
-      isOpen={display}
+      isOpen={isOpen}
       canEscapeKeyClose={canEscapeKeyClose}
       canOutsideClickClose={canOutsideClickClose}
     >
