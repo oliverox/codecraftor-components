@@ -12,11 +12,10 @@ const SpinnerOverlay = ({
   return (
     <Overlay
       isOpen={display}
-      className={`overlay-${size}`}
       canEscapeKeyClose={canEscapeKeyClose}
       canOutsideClickClose={canOutsideClickClose}
     >
-      <Spinner intent={intent} size={size} />
+      <Spinner intent={intent} size={size} className="spinner" />
     </Overlay>
   );
 };
