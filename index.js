@@ -1,4 +1,7 @@
 import Craft from './Craft/Craft';
 import SpinnerOverlay from './SpinnerOverlay/SpinnerOverlay';
 
-export { Craft, SpinnerOverlay };
+// React -> Blueprint Components
+import Heading from './react/blueprint/Heading/Heading';
+
+export { Craft, SpinnerOverlay, Heading };
