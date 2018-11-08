@@ -94,7 +94,7 @@ class Craft extends React.Component {
     const { isLoading } = this.state;
     return isLoading ? (
       <React.Fragment>
-        <SpinnerOverlay display={isLoading} />
+        <SpinnerOverlay isOpen={isLoading} />
       </React.Fragment>
     ) : (
       <React.Fragment>
