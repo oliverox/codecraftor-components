@@ -21,4 +21,8 @@ class Heading extends React.Component {
   }
 }
 
-export default Heading;
+export default {
+  name: 'Heading',
+  description: 'A heading component',
+  component: Heading,
+}
