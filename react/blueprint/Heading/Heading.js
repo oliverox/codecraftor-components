@@ -3,7 +3,7 @@ import { H1, H2, H3, H4, H5 } from '@blueprintjs/core';
 
 class Heading extends React.Component {
   render() {
-    const { type, children } = this.props;
+    const { type = 'H1', children } = this.props;
     switch (type) {
       case 'H1':
         return <H1>{children}</H1>;
