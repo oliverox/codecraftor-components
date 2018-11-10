@@ -23,6 +23,7 @@ class Heading extends React.Component {
 
 export default {
   name: 'Heading',
+  icon: 'header',
   description: 'A heading component',
   component: Heading,
 }
