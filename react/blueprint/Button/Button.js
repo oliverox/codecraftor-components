@@ -9,7 +9,7 @@ class Button extends React.Component {
 }
 
 export default {
-  name: 'Button',
+  label: 'Button',
   icon: 'widget-button',
   description: 'A button component',
   component: Button,
