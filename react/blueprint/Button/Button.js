@@ -9,10 +9,13 @@ class Button extends React.Component {
 }
 
 export default {
-  childNodes: [],
-  label: 'Button',
   component: Button,
   icon: 'widget-button',
+  label: 'Button',
+  childNodes: [],
   childText: 'Sample button',
   description: 'A button component',
+  configurable: {
+    childText: 'string'
+  }
 }
