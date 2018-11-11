@@ -22,8 +22,10 @@ class Heading extends React.Component {
 }
 
 export default {
-  label: 'Heading',
   icon: 'header',
-  description: 'A heading component',
+  childNodes: [],
+  label: 'Heading',
   component: Heading,
+  childText: 'Sample heading',
+  description: 'A heading component',
 }

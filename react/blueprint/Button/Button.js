@@ -9,8 +9,10 @@ class Button extends React.Component {
 }
 
 export default {
+  childNodes: [],
   label: 'Button',
-  icon: 'widget-button',
-  description: 'A button component',
   component: Button,
+  icon: 'widget-button',
+  childText: 'Sample button',
+  description: 'A button component',
 }
