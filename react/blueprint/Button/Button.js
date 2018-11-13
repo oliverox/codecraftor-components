@@ -12,14 +12,12 @@ export default {
   component: Button,
   icon: 'widget-button',
   label: 'Button',
-  childNodes: [],
-  childText: 'Sample button',
   description: 'A button component',
-  children: {
-    type: 'string',
-    default: 'Sample button'
-  },
   props: {
+    children: {
+      type: 'string',
+      default: 'Default button'
+    },
     intent: {
       type: ['none', 'primary', 'success', 'warning', 'danger'],
       default: 'none'

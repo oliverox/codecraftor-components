@@ -25,14 +25,12 @@ export default {
   component: Heading,
   icon: 'header',
   label: 'Heading',
-  childNodes: [],
-  childText: 'Sample heading',
   description: 'A heading component',
-  children: {
-    type: 'string',
-    default: 'Sample heading'
-  },
   props: {
+    children: {
+      type: 'string',
+      default: 'Sample Heading'
+    },
     type: {
       type: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'],
       default: 'H1'
