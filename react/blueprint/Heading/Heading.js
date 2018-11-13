@@ -28,7 +28,14 @@ export default {
   childNodes: [],
   childText: 'Sample heading',
   description: 'A heading component',
-  configurable: {
-    childText: 'string'
+  children: {
+    type: 'string',
+    default: 'Sample heading'
+  },
+  props: {
+    type: {
+      type: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'],
+      default: 'H1'
+    }
   }
 }

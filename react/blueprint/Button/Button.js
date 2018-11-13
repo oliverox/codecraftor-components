@@ -15,7 +15,30 @@ export default {
   childNodes: [],
   childText: 'Sample button',
   description: 'A button component',
-  configurable: {
-    childText: 'string'
+  children: {
+    type: 'string',
+    default: 'Sample button'
+  },
+  props: {
+    intent: {
+      type: ['none', 'primary', 'success', 'warning', 'danger'],
+      default: 'none'
+    },
+    disabled: {
+      type: 'boolean',
+      default: false
+    },
+    minimal: {
+      type: 'boolean',
+      default: false
+    },
+    large: {
+      type: 'boolean',
+      default: false
+    },
+    icon: {
+      type: 'string',
+      default: false
+    }
   }
 }
