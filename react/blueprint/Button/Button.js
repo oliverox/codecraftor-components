@@ -9,7 +9,7 @@ class Button extends React.Component {
       disabled = false,
       minimal = false,
       large = false,
-      icon = '',
+      icon = false,
       ...otherProps
     } = this.props;
 
