@@ -9,7 +9,6 @@ class Button extends React.Component {
       disabled = false,
       minimal = false,
       large = false,
-      icon = false,
       ...otherProps
     } = this.props;
 
@@ -19,7 +18,6 @@ class Button extends React.Component {
         disabled={disabled}
         minimal={minimal}
         large={large}
-        icon={icon}
         {...otherProps}
       >
         {children}
@@ -39,7 +37,7 @@ export default {
       default: 'Default button'
     },
     intent: {
-      type: ['none', 'primary', 'success', 'warning', 'danger'],
+      type: ['None', 'Primary', 'Success', 'Warning', 'Danger'],
       default: 'none'
     },
     disabled: {
