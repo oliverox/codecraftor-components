@@ -56,7 +56,7 @@ export default {
     },
     icon: {
       type: 'string',
-      default: false
+      default: ''
     }
   }
 };
