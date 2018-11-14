@@ -3,8 +3,28 @@ import { Button as ButtonBP } from '@blueprintjs/core';
 
 class Button extends React.Component {
   render() {
-    const { children, ...otherProps } = this.props;
-    return <ButtonBP {...otherProps}>{children}</ButtonBP>
+    const {
+      children,
+      intent = 'none',
+      disabled = false,
+      minimal = false,
+      large = false,
+      icon = '',
+      ...otherProps
+    } = this.props;
+
+    return (
+      <ButtonBP
+        intent={intent}
+        disabled={disabled}
+        minimal={minimal}
+        large={large}
+        icon={icon}
+        {...otherProps}
+      >
+        {children}
+      </ButtonBP>
+    );
   }
 }
 
@@ -39,4 +59,4 @@ export default {
       default: false
     }
   }
-}
+};
