@@ -15,6 +15,8 @@ class Heading extends React.Component {
         return <H4>{children}</H4>;
       case 'H5':
         return <H5>{children}</H5>;
+      case 'H6':
+        return <H6>{children}</H6>;
       default:
         throw new Error('Invalid Heading type');
     }
