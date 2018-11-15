@@ -26,6 +26,7 @@ class Heading extends React.Component {
 export default {
   component: Heading,
   getLabel: obj => {
+    debugger;
     console.log('getLabel from', obj, `[${obj.props.type.value || obj.props.type.default}] ${obj.props.children.value || obj.props.children.default}`);
     return (`[${obj.props.type.value || obj.props.type.default}] ${obj.props.children.value || obj.props.children.default}`);
   },
