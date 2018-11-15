@@ -30,7 +30,9 @@ class Button extends React.Component {
 export default {
   component: Button,
   icon: 'widget-button',
+  getLabel: obj => 'Button',
   label: 'Button',
+  usePropAsLabel: 'children',
   description: 'A button component',
   props: {
     children: {

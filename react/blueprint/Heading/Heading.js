@@ -25,8 +25,9 @@ class Heading extends React.Component {
 
 export default {
   component: Heading,
+  getLabel: obj => `[${obj.props.type.value || obj.props.type.default}] ${obj.props.children.value || obj.props.children.default}`,
   icon: 'header',
-  label: 'Heading',
+  label: '[H1] Sample Heading',
   description: 'A heading component',
   props: {
     children: {
