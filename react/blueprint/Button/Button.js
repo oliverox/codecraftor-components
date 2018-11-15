@@ -12,7 +12,7 @@ class Button extends React.Component {
       icon = false,
       ...otherProps
     } = this.props;
-
+    console.log('****************************** icon=', icon);
     return (
       <ButtonBP
         intent={intent}
