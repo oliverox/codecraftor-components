@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1, H2, H3, H4, H5 } from '@blueprintjs/core';
+import { H1, H2, H3, H4, H5, H6 } from '@blueprintjs/core';
 
 class Heading extends React.Component {
   render() {
