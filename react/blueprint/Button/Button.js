@@ -9,6 +9,7 @@ class Button extends React.Component {
       disabled = false,
       minimal = false,
       large = false,
+      icon = false,
       ...otherProps
     } = this.props;
 
@@ -18,8 +19,8 @@ class Button extends React.Component {
         disabled={disabled}
         minimal={minimal}
         large={large}
+        icon={icon && icon.length > 0}
         {...otherProps}
-        icon={false}
       >
         {children}
       </ButtonBP>
