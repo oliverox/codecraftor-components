@@ -12,14 +12,13 @@ class Button extends React.Component {
       icon = false,
       ...otherProps
     } = this.props;
-    console.log('****************************** icon=', icon, icon.length > 0);
     return (
       <ButtonBP
         intent={intent}
         disabled={disabled}
         minimal={minimal}
         large={large}
-        icon={icon.length > 0}
+        icon={icon.length > 0 ? icon : false}
         {...otherProps}
       >
         {children}
