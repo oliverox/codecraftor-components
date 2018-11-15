@@ -19,6 +19,7 @@ class Button extends React.Component {
         minimal={minimal}
         large={large}
         {...otherProps}
+        icon={false}
       >
         {children}
       </ButtonBP>
