@@ -7,3 +7,5 @@ const Container = ({ children, className = '', style = {} }) => {
     </div>
   );
 };
+
+export default Container;
