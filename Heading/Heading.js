@@ -6,26 +6,26 @@ const Heading = ({
   className = '',
   style = {}
 }) => {
-  let ComponentToRender = 'H1';
+  let ComponentToRender = 'h1';
   switch (type.toLowerCase()) {
-    case 'H2':
-      ComponentToRender = 'H2';
+    case 'h2':
+      ComponentToRender = 'h2';
       break;
 
-    case 'H3':
-      ComponentToRender = 'H3';
+    case 'h3':
+      ComponentToRender = 'h3';
       break;
 
-    case 'H4':
-      ComponentToRender = 'H4';
+    case 'h4':
+      ComponentToRender = 'h4';
       break;
 
-    case 'H5':
-      ComponentToRender = 'H5';
+    case 'h5':
+      ComponentToRender = 'h5';
       break;
 
-    case 'H6':
-      ComponentToRender = 'H6';
+    case 'h6':
+      ComponentToRender = 'h6';
       break;
 
     default:
