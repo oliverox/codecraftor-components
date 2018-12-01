@@ -1,6 +1,6 @@
 import React from 'react';
 import { Overlay, Spinner } from '@blueprintjs/core';
-import './SpinnerOverlay.scss';
+import styles from './SpinnerOverlay.module.css';
 
 const SpinnerOverlay = ({
   isOpen = false,
@@ -15,7 +15,7 @@ const SpinnerOverlay = ({
       canEscapeKeyClose={canEscapeKeyClose}
       canOutsideClickClose={canOutsideClickClose}
     >
-      <Spinner intent={intent} size={size} className="spinner" />
+      <Spinner intent={intent} size={size} className={styles.spinner} />
     </Overlay>
   );
 };
