@@ -6,7 +6,8 @@ import SpinnerOverlay from './SpinnerOverlay/SpinnerOverlay';
 const componentModules = { Heading, Span, Container, SpinnerOverlay };
 const componentList = Object.keys(componentModules);
 
-export { componentModules, componentList };
+export default componentList;
+export { componentModules };
 
 // React -> Blueprint Components
 // import Heading from './react/blueprint/Heading/Heading';
