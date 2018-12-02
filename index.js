@@ -3,7 +3,10 @@ import Span from './Span/Span';
 import Container from './Container/Container';
 import SpinnerOverlay from './SpinnerOverlay/SpinnerOverlay';
 
-export { Heading, Span, Container, SpinnerOverlay };
+const componentModules = { Heading, Span, Container, SpinnerOverlay };
+const componentList = Object.keys(componentModules);
+
+export { componentModules, componentList };
 
 // React -> Blueprint Components
 // import Heading from './react/blueprint/Heading/Heading';
