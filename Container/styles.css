@@ -1,0 +1,6 @@
+.containerDev {
+  border: 2px solid black;
+}
+.containerDev:hover {
+  outline: 1px solid lightblue;
+}
