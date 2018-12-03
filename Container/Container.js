@@ -1,24 +1,30 @@
 import React from 'react';
 
-if (process.env.NODE_ENV === 'development') {
-  import('./styles.css');
-}
+import styles from './defaultStyles.module.css';
 
-const Container = ({ children, className = '', style = {} }) => {
-  const devClassName = 'containerDev';
-  const isDev = process.env.NODE_ENV === 'development';
-  const defaultStyle = {
-    width: '100%',
-    minHeight: 100,
-    backgroundColor: '#fff'
-  };
+const Container = ({
+  children,
+  className = '',
+  style = {},
+  devMode = true
+}) => {
+  if (devMode) {
+  }
+  const devClassName = ' containerDev';
+  const devStyle = React.lazy(() => import('./devStyles.module.css'));
+  let cn = `${styles.default} ${className}`;
+  if (devMode) {
+    cn = `${cn} ${devStyle.default.container}`
+  }
   return (
-    <div
-      style={{ ...defaultStyle, ...style }}
-      className={`${className} ${isDev ? devClassName : ''}`}
-    >
-      {children}
-    </div>
+    <React.Suspense fallback={<div>loading...</div>}>
+      <div
+        style={{ ...style }}
+        className={cn}
+      >
+        {children}
+      </div>
+    </React.Suspense>
   );
 };
 
