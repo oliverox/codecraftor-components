@@ -1,8 +1,8 @@
 import React from 'react';
-import MasterContainer from './MasterContainer';
+import RootContainer from './RootContainer';
 import defaultStyles from './defaultStyles.module.css';
 
-class MasterContainerComponent extends React.Component {
+class RootContainerComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,16 +29,16 @@ class MasterContainerComponent extends React.Component {
       cn = `${cn} ${devStyles}`;
     }
     return (
-      <MasterContainer style={style} className={cn}>
+      <RootContainer style={style} className={cn}>
         {children}
-      </MasterContainer>
+      </RootContainer>
     );
   }
 }
 
-export default MasterContainerComponent;
+export default RootContainerComponent;
 
-MasterContainerComponent.defaultProps = {
+RootContainerComponent.defaultProps = {
   devMode: false,
   className: '',
   style: {},
