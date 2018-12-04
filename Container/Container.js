@@ -10,7 +10,6 @@ const Container = ({
 }) => {
   if (devMode) {
   }
-  const devClassName = ' containerDev';
   const devStyle = React.lazy(() => import('./devStyles.module.css'));
   let cn = `${styles.default} ${className}`;
   if (devMode) {
