@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Span = ({ text = 'Edit this text', className = '', style = {} }) => {
+const Span = ({ text, className, style = {} }) => {
   return (
     <span style={style} className={className}>
       {text}

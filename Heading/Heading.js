@@ -1,13 +1,11 @@
 import React from 'react';
 
-const Heading = ({
-  type = 'h1',
-  text = 'Edit this heading',
-  className = '',
-  style = {}
-}) => {
+const Heading = ({ type, text, className, style }) => {
   let ComponentToRender = 'h1';
   switch (type.toLowerCase()) {
+    case 'h1':
+      ComponentToRender = 'h1';
+      break;
     case 'h2':
       ComponentToRender = 'h2';
       break;
