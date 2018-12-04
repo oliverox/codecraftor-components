@@ -1,8 +1,8 @@
 import React from 'react';
-import Container from './Container';
+import MasterContainer from './MasterContainer';
 import defaultStyles from './defaultStyles.module.css';
 
-class ContainerComponent extends React.Component {
+class MasterContainerComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,18 +29,18 @@ class ContainerComponent extends React.Component {
       cn = `${cn} ${devStyles}`;
     }
     return (
-      <Container style={style} className={cn}>
+      <MasterContainer style={style} className={cn}>
         {children}
-      </Container>
+      </MasterContainer>
     );
   }
 }
 
-export default ContainerComponent;
+export default MasterContainerComponent;
 
-ContainerComponent.defaultProps = {
+MasterContainerComponent.defaultProps = {
   devMode: false,
   className: '',
   style: {},
-  children: 'Container component'
+  children: []
 };

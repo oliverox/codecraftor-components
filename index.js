@@ -1,14 +1,15 @@
 import Heading from './Heading/Heading';
 import Span from './Span/Span';
-import Container from './Container/Container';
+import MasterComponent from './MasterContainer/MasterContainer';
+import GenericContainer from './GenericContainer/GenericContainer';
 
-const modules = { Heading, Span, Container };
+const modules = { Heading, Span, GenericContainer, MasterComponent };
 
 const componentList = {
-  Container: {
+  GenericContainer: {
     name: 'Generic container',
     icon: 'control'
-  }, 
+  },
   Button: {
     name: 'Button',
     icon: 'widget-button'
