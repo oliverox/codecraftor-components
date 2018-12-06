@@ -1,9 +1,9 @@
 import Heading from './Heading/Heading';
-import Span from './Span/Span';
+import Text from './Text/Text';
 import RootContainer from './RootContainer/RootContainer';
 import GenericContainer from './GenericContainer/GenericContainer';
 
-const modules = { Heading, Span, GenericContainer, RootContainer };
+const modules = { Heading, Text, GenericContainer, RootContainer };
 
 const componentList = {
   GenericContainer: {
