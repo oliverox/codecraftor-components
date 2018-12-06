@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Span = ({ text, className, style = {} }) => {
+const Text = ({ text, className, style = {} }) => {
   return (
     <span style={style} className={className}>
       {text}
@@ -8,4 +8,4 @@ const Span = ({ text, className, style = {} }) => {
   );
 };
 
-export default Span;
+export default Text;
