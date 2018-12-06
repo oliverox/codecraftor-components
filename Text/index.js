@@ -18,7 +18,7 @@ class SpanComponent extends React.Component {
 SpanComponent.defaultProps = {
   className: '',
   style: {},
-  text: ''
+  text: 'Edit this text...'
 };
 
 export default {
