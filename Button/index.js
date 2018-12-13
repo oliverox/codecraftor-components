@@ -31,7 +31,7 @@ ButtonComponent.defaultProps = {
   linkTo: '#',
   className: '',
   style: {},
-  text: 'Click me...',
+  text: 'Default button',
   useContainerWidth: false
 };
 

@@ -23,7 +23,7 @@ const componentList = {
       prop: 'text',
       label: 'Text',
       type: 'string',
-      value: '',
+      value: 'Default button',
       placeholder: 'Text on button'
     }, {
       prop: 'linkTo',
