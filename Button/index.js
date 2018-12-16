@@ -4,7 +4,17 @@ import defaultStyles from './defaultStyles.module.css';
 
 class ButtonComponent extends React.Component {
   render() {
-    const { linkTo, className, style, text, useContainerWidth } = this.props;
+    const {
+      linkTo,
+      className,
+      style,
+      text,
+      useContainerWidth,
+      backgroundStyle,
+      fontStyle,
+      size,
+      theme
+    } = this.props;
     let cn = defaultStyles.default;
     let newStyles = {};
     if (className.length > 0) {
@@ -15,7 +25,15 @@ class ButtonComponent extends React.Component {
     } else {
       newStyles.width = 'auto';
     }
-
+    if (backgroundStyle) {
+      newStyles.backgroundColor = theme.colors[backgroundStyle]
+    }
+    if (fontStyle) {
+      newStyles.color = theme.colors[fontStyle]
+    }
+    if (size) {
+      newStyles.padding = `${size}px`;
+    }
     return (
       <Button
         linkTo={linkTo}
@@ -31,8 +49,11 @@ ButtonComponent.defaultProps = {
   linkTo: '#',
   className: '',
   style: {},
+  size: 10,
+  fontStyle: 'dark',
   text: 'Default button',
-  useContainerWidth: false
+  useContainerWidth: false,
+  backgroundStyle: 'primary'
 };
 
 export default {

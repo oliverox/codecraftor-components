@@ -4,7 +4,7 @@ import defaultStyles from './defaultStyles.module.css';
 
 class RootContainerComponent extends React.Component {
   render() {
-    const { children, className, style } = this.props;
+    const { children, className, style = {} } = this.props;
     let cn = defaultStyles.default;
     if (className.length > 0) {
       cn = `${cn} ${className}`;
@@ -20,7 +20,6 @@ class RootContainerComponent extends React.Component {
 
 RootContainerComponent.defaultProps = {
   className: '',
-  style: {},
   children: []
 };
 

@@ -1,5 +1,6 @@
 .default {
+  flex: 1;
   width: 100%;
-  min-height: 100%;
+  padding-bottom: 140px;
   box-sizing: border-box;
 }
