@@ -68,7 +68,7 @@ export default {
     },
     {
       prop: 'size',
-      label: 'Size (pixels)',
+      label: 'Padding size (in pixels)',
       type: 'numeric',
       value: 10,
       unit: 'px',

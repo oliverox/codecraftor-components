@@ -4,13 +4,17 @@ import defaultStyles from './defaultStyles.module.css';
 
 class GenericContainerComponent extends React.Component {
   render() {
-    const { children, className, style } = this.props;
+    const { children, className, style, height } = this.props;
     let cn = defaultStyles.default;
+    let newStyles = {};
     if (className.length > 0) {
       cn = `${cn} ${className}`;
     }
+    if (height) {
+      newStyles.height = `${height}px`;
+    }
     return (
-      <GenericContainer style={style} className={cn}>
+      <GenericContainer style={Object.assign(newStyles, style)} className={cn}>
         {children}
       </GenericContainer>
     );
@@ -26,4 +30,4 @@ GenericContainerComponent.defaultProps = {
 export default {
   module: GenericContainerComponent,
   defaultProps: GenericContainerComponent.defaultProps
-}
+};
