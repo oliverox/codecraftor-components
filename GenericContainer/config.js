@@ -45,5 +45,10 @@ export default {
         value: 'bottom'
       }
     ]
+  }, {
+    prop: 'backgroundColor',
+    label: 'Background color',
+    type: 'color',
+    value: 'transparent',
   }]
 }

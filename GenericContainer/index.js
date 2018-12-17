@@ -4,7 +4,14 @@ import defaultStyles from './defaultStyles.module.css';
 
 class GenericContainerComponent extends React.Component {
   render() {
-    const { children, className, height, hAlign, vAlign } = this.props;
+    const {
+      children,
+      className,
+      height,
+      hAlign,
+      vAlign,
+      backgroundColor
+    } = this.props;
     let cn = defaultStyles.default;
     let styles = {};
     if (className.length > 0) {
@@ -13,6 +20,10 @@ class GenericContainerComponent extends React.Component {
 
     if (height) {
       styles.height = `${height}px`;
+    }
+
+    if (backgroundColor) {
+      styles.backgroundColor = backgroundColor;
     }
     
     switch (hAlign) {
@@ -57,6 +68,7 @@ GenericContainerComponent.defaultProps = {
   className: '',
   hAlign: 'left',
   vAlign: 'top',
+  backgroundColor: 'transparent',
   children: 'Generic Container component'
 };
 
