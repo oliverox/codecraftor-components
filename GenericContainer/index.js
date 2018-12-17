@@ -4,17 +4,49 @@ import defaultStyles from './defaultStyles.module.css';
 
 class GenericContainerComponent extends React.Component {
   render() {
-    const { children, className, style, height } = this.props;
+    const { children, className, height, hAlign, vAlign } = this.props;
     let cn = defaultStyles.default;
-    let newStyles = {};
+    let styles = {};
     if (className.length > 0) {
       cn = `${cn} ${className}`;
     }
+
     if (height) {
-      newStyles.height = `${height}px`;
+      styles.height = `${height}px`;
     }
+    
+    switch (hAlign) {
+      case 'center':
+        styles.justifyContent = 'center';
+        break;
+
+      case 'right':
+        styles.justifyContent = 'flex-end';
+        break;
+
+      case 'left':
+      default:
+        styles.justifyContent = 'flex-start';
+        break;
+    }
+
+    switch (vAlign) {
+      case 'center':
+        styles.alignItems = 'center';
+        break;
+
+      case 'bottom':
+        styles.alignItems = 'flex-end';
+        break;
+
+      case 'top':
+      default:
+        styles.justifyContent = 'flex-start';
+        break;
+    }
+
     return (
-      <GenericContainer style={Object.assign(newStyles, style)} className={cn}>
+      <GenericContainer style={styles} className={cn}>
         {children}
       </GenericContainer>
     );
@@ -23,7 +55,8 @@ class GenericContainerComponent extends React.Component {
 
 GenericContainerComponent.defaultProps = {
   className: '',
-  style: {},
+  hAlign: 'left',
+  vAlign: 'top',
   children: 'Generic Container component'
 };
 

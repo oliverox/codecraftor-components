@@ -54,7 +54,7 @@ export default {
       prop: 'fontStyle',
       label: 'Font style',
       type: 'list',
-      value: 'none',
+      value: 'dark',
       list: [
         {
           name: 'Dark',

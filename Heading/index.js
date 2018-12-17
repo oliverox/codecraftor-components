@@ -4,19 +4,18 @@ import defaultStyles from './defaultStyles.module.css';
 
 class HeadingComponent extends React.Component {
   render() {
-    const { text, type, className, style } = this.props;
+    const { text, type, className } = this.props;
     let cn = defaultStyles.default;
+    let styles = {};
     if (className.length > 0) {
       cn = `${cn} ${className}`;
     }
-    return <Heading style={style} className={cn} text={text} type={type} />;
+    return <Heading style={styles} className={cn} text={text} type={type} />;
   }
 }
 
-
 HeadingComponent.defaultProps = {
   className: '',
-  style: {},
   type: 'h1',
   text: 'Edit this heading'
 };

@@ -7,7 +7,6 @@ class ButtonComponent extends React.Component {
     const {
       linkTo,
       className,
-      style,
       text,
       useContainerWidth,
       backgroundStyle,
@@ -16,28 +15,28 @@ class ButtonComponent extends React.Component {
       theme
     } = this.props;
     let cn = defaultStyles.default;
-    let newStyles = {};
+    let styles = {};
     if (className.length > 0) {
       cn = `${cn} ${className}`;
     }
     if (useContainerWidth) {
-      newStyles.width = '100%';
+      styles.width = '100%';
     } else {
-      newStyles.width = 'auto';
+      styles.width = 'auto';
     }
     if (backgroundStyle) {
-      newStyles.backgroundColor = theme.colors[backgroundStyle]
+      styles.backgroundColor = theme.colors[backgroundStyle]
     }
     if (fontStyle) {
-      newStyles.color = theme.colors[fontStyle]
+      styles.color = theme.colors[fontStyle]
     }
     if (size) {
-      newStyles.padding = `${size}px`;
+      styles.padding = `${size}px`;
     }
     return (
       <Button
         linkTo={linkTo}
-        style={Object.assign(newStyles, style)}
+        style={styles}
         className={cn}
         text={text}
       />
@@ -48,7 +47,6 @@ class ButtonComponent extends React.Component {
 ButtonComponent.defaultProps = {
   linkTo: '#',
   className: '',
-  style: {},
   size: 10,
   fontStyle: 'dark',
   text: 'Default button',
