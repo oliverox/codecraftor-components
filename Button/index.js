@@ -48,7 +48,7 @@ ButtonComponent.defaultProps = {
   linkTo: '#',
   className: '',
   size: 10,
-  fontStyle: 'dark',
+  fontStyle: 'light',
   text: 'Default button',
   useContainerWidth: false,
   backgroundStyle: 'primary'

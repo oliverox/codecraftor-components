@@ -25,7 +25,7 @@ class GenericContainerComponent extends React.Component {
     if (backgroundColor) {
       styles.backgroundColor = backgroundColor;
     }
-    
+
     switch (hAlign) {
       case 'center':
         styles.justifyContent = 'center';
@@ -52,7 +52,7 @@ class GenericContainerComponent extends React.Component {
 
       case 'top':
       default:
-        styles.justifyContent = 'flex-start';
+        styles.alignItems = 'flex-start';
         break;
     }
 
