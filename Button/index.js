@@ -47,7 +47,7 @@ class ButtonComponent extends React.Component {
 ButtonComponent.defaultProps = {
   linkTo: '#',
   className: '',
-  size: 10,
+  size: 15,
   fontStyle: 'light',
   text: 'Default button',
   useContainerWidth: false,

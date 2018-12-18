@@ -5,11 +5,11 @@ export default {
     prop: 'text',
     label: 'Text',
     type: 'string',
-    value: 'Edit this heading',
+    value: 'Edit this heading text',
     placeholder: 'Heading text'
   }, {
     prop: 'type',
-    label: 'Heading type',
+    label: 'Heading element',
     type: 'list',
     list: [{
       name: 'H1',
@@ -29,6 +29,29 @@ export default {
     }, {
       name: 'H6',
       value: 'h6'
+    }]
+  }, {
+    prop: 'colorStyle',
+    label: 'Color style',
+    type: 'list',
+    list: [{
+      name: 'Dark',
+      value: 'dark'
+    }, {
+      name: 'Light',
+      value: 'light'
+    }, {
+      name: 'Primary',
+      value: 'primary'
+    }, {
+      name: 'Secondary',
+      value: 'secondary'
+    }, {
+      name: 'Tertiary',
+      value: 'tertiary'
+    }, {
+      name: 'Quaternary',
+      value: 'quaternary'
     }]
   }]
 }

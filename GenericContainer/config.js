@@ -46,6 +46,12 @@ export default {
       }
     ]
   }, {
+    prop: 'padding',
+    label: 'Padding around content (px)',
+    type: 'numeric',
+    value: 0,
+    unit: 'px'
+  }, {
     prop: 'backgroundColor',
     label: 'Background color',
     type: 'color',

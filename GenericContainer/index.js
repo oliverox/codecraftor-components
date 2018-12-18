@@ -10,6 +10,7 @@ class GenericContainerComponent extends React.Component {
       height,
       hAlign,
       vAlign,
+      padding,
       backgroundColor
     } = this.props;
     let cn = defaultStyles.default;
@@ -56,6 +57,10 @@ class GenericContainerComponent extends React.Component {
         break;
     }
 
+    if (padding) {
+      styles.padding = `${padding}px`;
+    }
+
     return (
       <GenericContainer style={styles} className={cn}>
         {children}
@@ -68,6 +73,7 @@ GenericContainerComponent.defaultProps = {
   className: '',
   hAlign: 'left',
   vAlign: 'top',
+  padding: 0,
   backgroundColor: 'transparent',
   children: 'Generic Container component'
 };
