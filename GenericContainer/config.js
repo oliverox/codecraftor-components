@@ -2,12 +2,6 @@ export default {
   name: 'Generic container',
   icon: 'control',
   config: [{
-    prop: 'height',
-    label: 'Height (in pixels)',
-    type: 'numeric',
-    value: 100,
-    unit: 'px'
-  }, {
     prop: 'hAlign',
     label: 'Horizontal content alignment',
     type: 'list',
@@ -45,6 +39,12 @@ export default {
         value: 'bottom'
       }
     ]
+  }, {
+    prop: 'height',
+    label: 'Height (px)',
+    type: 'numeric',
+    value: 100,
+    unit: 'px'
   }, {
     prop: 'padding',
     label: 'Padding around content (px)',
