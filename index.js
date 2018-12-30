@@ -1,13 +1,17 @@
 import TextConfig from './Text/config';
 import ButtonConfig from './Button/config';
 import HeadingConfig from './Heading/config';
+import PageHeaderConfig from './PageHeader/config';
+import PageFooterConfig from './PageFooter/config';
 import GenericContainerConfig from './GenericContainer/config';
 
 const componentList = {
-  GenericContainer: GenericContainerConfig,
+  PageHeader: PageHeaderConfig,
   Heading: HeadingConfig,
   Button: ButtonConfig,
   Text: TextConfig,
+  GenericContainer: GenericContainerConfig,
+  PageFooter: PageFooterConfig
   // PageHeader: {
   //   name: 'Page Header',
   //   icon: 'widget-header'
