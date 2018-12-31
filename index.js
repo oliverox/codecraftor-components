@@ -4,26 +4,16 @@ import HeadingConfig from './Heading/config';
 import PageHeaderConfig from './PageHeader/config';
 import PageFooterConfig from './PageFooter/config';
 import GenericContainerConfig from './GenericContainer/config';
+import SplashConfig from './Splash/config';
 
 const componentList = {
   PageHeader: PageHeaderConfig,
+  Splash: SplashConfig,
   Heading: HeadingConfig,
   Button: ButtonConfig,
   Text: TextConfig,
   GenericContainer: GenericContainerConfig,
   PageFooter: PageFooterConfig
-  // PageHeader: {
-  //   name: 'Page Header',
-  //   icon: 'widget-header'
-  // },
-  // Image: {
-  //   name: 'Image',
-  //   icon: 'media'
-  // },
-  // Paragraph: {
-  //   name: 'Paragraph',
-  //   icon: 'paragraph'
-  // }
 };
 
 export default componentList;

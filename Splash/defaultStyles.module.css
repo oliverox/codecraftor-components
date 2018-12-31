@@ -1,0 +1,9 @@
+.default {
+  width: 100%;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 50px;
+  background-position: 50% 50%;
+}

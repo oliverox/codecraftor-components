@@ -5,8 +5,8 @@ export default {
     prop: 'content',
     label: 'Content',
     type: 'string',
-    value: '',
-    placeholder: 'Edit this text...'
+    value: 'Edit this text',
+    placeholder: 'Type some text'
   }, {
     prop: 'size',
     label: 'Font size',

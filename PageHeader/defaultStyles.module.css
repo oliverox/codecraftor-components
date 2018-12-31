@@ -12,6 +12,7 @@
 }
 
 .navMenu li {
+  font-size: 14px;
   display: inline;
   padding: 0 10px;
 }
